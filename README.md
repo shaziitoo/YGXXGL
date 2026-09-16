@@ -67,7 +67,7 @@ private String url = "jdbc:mysql://localhost:3306/rlzy?useUnicode=true&character
 本项目为 MyEclipse / Eclipse 的 Java Web 工程，源码位于 `src`，Web 根目录为 `WebRoot`。
 
 **方式 A：使用 IDE（推荐）**
-1. 用 MyEclipse / Eclipse 导入本项目。
+1. 导入本项目。
 2. 配置 Tomcat 服务器，将 `WebRoot` 作为 Web 应用根目录部署。
 3. 启动 Tomcat，访问 `http://localhost:8080/rlzy/login.jsp`。
 
