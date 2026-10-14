@@ -1,6 +1,7 @@
-# 员工信息管理系统
+# 人力资源管理系统（rlzy）
 
-一个基于 **JSP + Servlet** 的轻量级员工信息管理系统，提供组织架构管理、员工管理、考勤、工资、请假审批等核心功能。纯 Java Web 实现，无需额外框架.
+一个基于 **JSP + Servlet** 的轻量级企业人力资源（HR）管理系统，提供组织架构管理、员工管理、考勤、工资、请假审批等核心功能。纯 Java Web 实现，无需额外框架，开箱即用，适合教学、毕业设计或小型企业内部使用。
+
 ## 功能模块
 
 | 模块 | 说明 | 数据表 |
@@ -67,7 +68,7 @@ private String url = "jdbc:mysql://localhost:3306/rlzy?useUnicode=true&character
 本项目为 MyEclipse / Eclipse 的 Java Web 工程，源码位于 `src`，Web 根目录为 `WebRoot`。
 
 **方式 A：使用 IDE（推荐）**
-1. 导入本项目。
+1. 用 MyEclipse / Eclipse 导入本项目。
 2. 配置 Tomcat 服务器，将 `WebRoot` 作为 Web 应用根目录部署。
 3. 启动 Tomcat，访问 `http://localhost:8080/rlzy/login.jsp`。
 

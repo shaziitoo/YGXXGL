@@ -15,6 +15,7 @@ String path = request.getContextPath();
 		<meta http-equiv="description" content="This is my page" />
         
         <link rel="stylesheet" type="text/css" href="<%=path %>/css/base.css" />
+		<link rel="stylesheet" type="text/css" href="<%=path %>/css/theme.css" />
         
         <script language="javascript">
         </script>
@@ -26,7 +27,7 @@ String path = request.getContextPath();
 						<tr bgcolor="#EEF4EA">
 					        <td colspan="3" background="<%=path %>/img/wbg.gif" class='title'><span>管理员添加</span></td>
 					    </tr>
-						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='red';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
+						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='#eef4ff';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
 						    <td width="25%" bgcolor="#FFFFFF" align="right">
 						         帐号：
 						    </td>
@@ -34,7 +35,7 @@ String path = request.getContextPath();
 						        <input type="text" name="userName" size="20"/>
 						    </td>
 						</tr>
-						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='red';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
+						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='#eef4ff';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
 						    <td width="25%" bgcolor="#FFFFFF" align="right">
 						         密码：
 						    </td>
@@ -42,7 +43,7 @@ String path = request.getContextPath();
 						        <input type="text" name="userPw" size="20"/>
 						    </td>
 						</tr>
-						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='red';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
+						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='#eef4ff';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
 						    <td width="25%" bgcolor="#FFFFFF" align="right">
 						        &nbsp;
 						    </td>

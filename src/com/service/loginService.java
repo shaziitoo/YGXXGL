@@ -74,7 +74,7 @@ public class loginService
 		if(userType==1)
 		{
 			String sql="select * from t_yuangong where del='no' and loginname=? and loginpw=?";
-			Object[] params={userName,userPw};
+			Object[] params={userName,com.util.MD5Util.md5(userPw)};
 			DB mydb=new DB();
 			mydb.doPstm(sql, params);
 			try 
@@ -153,10 +153,9 @@ public class loginService
     
     
     
-    public String yuangong_PwEdit(String newpw)
+    public String yuangong_PwEdit(String oldpw, String newpw)
     {
-		System.out.println("DDDD");
-    	try 
+		try 
 		{
 			Thread.sleep(700);
 		} 
@@ -168,10 +167,31 @@ public class loginService
 		HttpSession session=ctx.getSession(); 
 		Yuangong yuangong=(Yuangong)session.getAttribute("yuangong");
 		
-		String sql="update t_yuangong set loginpw=? where id=?";
-		Object[] params={newpw,yuangong.getId()};
+		String sql="select loginpw from t_yuangong where id=?";
+		Object[] params={yuangong.getId()};
 		DB mydb=new DB();
 		mydb.doPstm(sql, params);
+		String stored="";
+		try 
+		{
+			ResultSet rs=mydb.getRs();
+			if(rs!=null && rs.next()) stored=rs.getString("loginpw");
+		}
+		catch (SQLException e)
+		{
+			e.printStackTrace();
+		}
+		
+		if(!stored.equals(com.util.MD5Util.md5(oldpw)))
+		{
+			mydb.closed();
+			return "oldError";
+		}
+		
+		String sql2="update t_yuangong set loginpw=? where id=?";
+		Object[] params2={com.util.MD5Util.md5(newpw),yuangong.getId()};
+		mydb.doPstm(sql2, params2);
+		mydb.closed();
 		
 		return "yes";
     }

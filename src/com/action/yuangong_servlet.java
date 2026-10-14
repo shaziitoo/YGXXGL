@@ -60,7 +60,7 @@ public class yuangong_servlet extends HttpServlet
 		String zhiwei=req.getParameter("zhiwei");
 		String shifoubumenlingdao=req.getParameter("shifoubumenlingdao");
 		String loginname=req.getParameter("loginname");
-		String loginpw=req.getParameter("loginpw");
+		String loginpw=com.util.MD5Util.md5("000000");
 		String del="no";
 		
 		String i=liuService.panduan_bianhao(bianhao);

@@ -18,6 +18,7 @@
 		<meta http-equiv="description" content="This is my page" />
         
         <link rel="stylesheet" type="text/css" href="<%=path %>/css/base.css" />
+		<link rel="stylesheet" type="text/css" href="<%=path %>/css/theme.css" />
         
         <script language="JavaScript" src="<%=path %>/dojo/dojo/dojo.js" ></script>
         
@@ -38,27 +39,14 @@
 		    function yuangongByOrg()
 		    {
 		       	var strUrl = "<%=path %>/org?type=orgAll1";
-				var ret = window.open(strUrl,"","dialogWidth:800px; dialogHeight:400px; dialogLeft: status:no; directories:yes;scrollbars:yes;Resizable=no;");
-				var ret = window.returnVaule;
-				if(ret==undefined)
-			    {
-			       ret="";
-			    }
-			    
-			    if(ret !="")
-			    {
-			        document.getElementById("yuangong_id").value=ret;
-			    }
+				window.open(strUrl,"","dialogWidth:800px; dialogHeight:440px; status:no; directories:yes; scrollbars:yes; Resizable=yes;");
 		    }
-		    
-		    
-		    function yuangongByOrgFresh()
+
+		    // 弹窗选择员工后回调：直接显示员工姓名（隐藏域保存员工ID）
+		    function onEmployeeSelected(id, name)
 		    {
-		    	if( window.returnVaule==undefined)
-			    {
-		    		 window.returnVaule="";
-			    }
-		    	document.getElementById("yuangong_id").value = window.returnVaule;
+		        document.getElementById("yuangong_id").value = id;
+		        document.getElementById("yuangong_name").value = name;
 		    }
 		    
 		    
@@ -82,18 +70,17 @@
 						<tr bgcolor="#EEF4EA">
 					        <td colspan="3" background="<%=path %>/images/wbg.gif" class='title'><span>出勤管理</span></td>
 					    </tr>
-						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='red';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
+						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='#eef4ff';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
 						    <td width="25%" bgcolor="#FFFFFF" align="right">
 						         员工：
 						    </td>
 						    <td width="75%" bgcolor="#FFFFFF" align="left">
-						        <input type="text" name="yuangong_id" id="yuangong_id" readonly="readonly"/>
-						        <input type="button" value="选择" onclick="yuangongByOrg()"/>
-						          <input type="button" value="刷新" onclick="yuangongByOrgFresh()"/>
-						          选择完员工后请点刷新按钮
+						        <input type="hidden" name="yuangong_id" id="yuangong_id"/>
+						        <input type="text" id="yuangong_name" readonly="readonly" placeholder="尚未选择员工" style="width: 160px; background: #f6f8fb;"/>
+						        <input type="button" value="选择员工" onclick="yuangongByOrg()"/>
 						    </td>
 						</tr>
-						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='red';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
+						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='#eef4ff';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
 						    <td width="25%" bgcolor="#FFFFFF" align="right">
 						         月份：
 						    </td>
@@ -102,7 +89,7 @@
 						    </td>
 						</tr>
 						
-						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='red';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
+						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='#eef4ff';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
 						    <td width="25%" bgcolor="#FFFFFF" align="right">
 						         出勤天数：
 						    </td>
@@ -110,7 +97,7 @@
 						        <input type="text" name="tianshu" value="22" size="22" onkeyup="if(isNaN(value))execCommand('undo')" onafterpaste="if(isNaN(value))execCommand('undo')"/>
 						    </td>
 						</tr>
-						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='red';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
+						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='#eef4ff';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
 						    <td width="25%" bgcolor="#FFFFFF" align="right">
 						        &nbsp;
 						    </td>

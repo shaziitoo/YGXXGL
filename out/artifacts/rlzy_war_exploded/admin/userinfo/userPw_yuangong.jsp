@@ -15,6 +15,7 @@ String path = request.getContextPath();
 		<meta http-equiv="description" content="This is my page" />
         
         <link rel="stylesheet" type="text/css" href="<%=path %>/css/base.css" />
+		<link rel="stylesheet" type="text/css" href="<%=path %>/css/theme.css" />
 		
 		<script type='text/javascript' src='<%=path %>/dwr/interface/loginService.js'></script>
         <script type='text/javascript' src='<%=path %>/dwr/engine.js'></script>
@@ -23,20 +24,28 @@ String path = request.getContextPath();
         <script language="javascript">
             function check()
             {
-                 var real="${sessionScope.yuangong.loginpw}";
-                 if(document.formPw.loginpw.value !=real)
+                 if(document.formPw.loginpw.value == "")
                  {
-                     alert("原密码不正确");
+                     alert("请输入原密码");
                      return ;
                  }
-                 
-                 if(document.formPw.loginpw1.value =="")
+                 if(document.formPw.loginpw1.value == "")
                  {
                      alert("新密码不能空");
                      return ;
                  }
                  document.getElementById("indicator").style.display="block";
-                 loginService.yuangong_PwEdit(document.formPw.loginpw1.value,callback);
+                 loginService.yuangong_PwEdit(document.formPw.loginpw.value,document.formPw.loginpw1.value,callback);
+            }
+            function callback(data)
+            {
+                document.getElementById("indicator").style.display="none";
+                if(data=="oldError")
+                {
+                    alert("原密码不正确");
+                    return;
+                }
+                alert("修改成功,重新登陆后生效");
             }
             function callback(data)
             {

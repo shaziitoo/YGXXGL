@@ -2,391 +2,221 @@
 <%
 String path = request.getContextPath();
 %>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-	    <style type="text/css">
-		body {
-			margin-left: 0px;
-			margin-top: 0px;
-			margin-right: 0px;
-			margin-bottom: 0px;
-			background-color: #1D3647;
-		}
-		.login_top_bg {background-image: url(<%=path %>/img/login-top-bg.gif);background-repeat: repeat-x;}
-		.body {
-			background-color: #EEF2FB;
-			left: 0px;
-			top: 0px;
-			right: 0px;
-			bottom: 0px;
-		}
-		
-		.login-buttom-bg {
-			background-image: url(<%=path %>/img/login-buttom-bg.gif);
-			background-repeat: repeat-x;
-		}
-		.login-buttom-txt {
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 10px;
-			color: #ABCAD3;
-			text-decoration: none;
-			line-height: 20px;
-		}
-		.login_txt {
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 12px;
-			line-height: 25px;
-			color: white;
-		}
-		.Submit {
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 12px;
-			color: #629DAE;
-			text-decoration: none;
-			background-image: url(<%=path %>/img/Submit_bg.gif);
-			background-repeat: repeat-x;
-		}
-		.login_bg {
-			background-image: url(<%=path %>/img/login_bg.jpg);
-			background-repeat: repeat-x;
-		}
-		.login_bg2 {
-			background-image: url(<%=path %>/img/login-content-bg.gif);
-			background-repeat: no-repeat;
-			background-position: right;
-		}
-		
-		.admin_txt {
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 12px;
-			color: #FFFFFF;
-			text-decoration: none;
-			height: 38px;
-			width: 100%;
-			position: 固定;
-			line-height: 38px;
-		}
-		.login_txt_bt {
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 25px;
-			line-height: 25px;
-			color: #666666;
-			font-weight: bold;
-		}
-		.admin_topbg {
-			background-image: url(<%=path %>/img/top-right.gif);
-			background-repeat: repeat-x;
-		}
-		.txt_bt {
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 12px;
-			line-height: 25px;
-			font-weight: bold;
-			color: #000000;
-			text-decoration: none;
-		}
-		.left_topbg {
-			background-image: url(<%=path %>/img/content-bg.gif);
-			background-repeat: repeat-x;
-		}
-		.admin_toptxt {
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 12px;
-			color: #4A8091;
-			height: 18px;
-			width: 100%;
-			overflow: hidden;
-			position: 固定;
-		}
-		
-		.left_bt {
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 14px;
-			font-weight: bold;
-			color: #395a7b;
-		}
-		.left_bt2 {
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 12px;
-			line-height: 25px;
-			font-weight: bold;
-			color: #333333;
-		}
-		.titlebt {
-			font-size: 12px;
-			line-height: 26px;
-			font-weight: bold;
-			color: #000000;
-			background-image: url(<%=path %>/img/top_bt.jpg);
-			background-repeat: no-repeat;
-			display: block;
-			text-indent: 15px;
-			padding-top: 5px;
-		}
-		
-		.left_txt {
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 12px;
-			line-height: 25px;
-			color: #666666;
-		}
-		.left_txt2 {
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 12px;
-			line-height: 25px;
-			color: #000000;
-		}
-		.nowtable {
-			background-color: #e1e5ee;
-			border-top-width: 1px;
-			border-right-width: 1px;
-			border-bottom-width: 1px;
-			border-left-width: 1px;
-			border-top-style: solid;
-			border-top-color: #bfc4ca;
-			border-right-color: #bfc4ca;
-			border-bottom-color: #bfc4ca;
-			border-left-color: #bfc4ca;
-		}
-		.left_txt3 {
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 12px;
-			line-height: 25px;
-			color: #003366;
-			text-decoration: none;
-		}
-	
-	
-	
-		.left_ts {
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 12px;
-			line-height: 25px;
-			font-weight: bold;
-			color: #FF6600;
-		}
-		.line_table {
-			border: 1px solid #CCCCCC;
-		}
-		.sec1 {
-			CURSOR: hand;
-			COLOR: #000000;
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 12px;
-			line-height: 25px;
-			border: 1px solid #B5D0D9;
-			background-image: url(<%=path %>/img/right_smbg.jpg);
-			background-repeat: repeat-x;
-		}
-		.sec2 {
-			FONT-WEIGHT: bold;
-			CURSOR: hand;
-			COLOR: #000000;
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 12px;
-			line-height: 25px;
-			background-color: #e2e7ed;
-			border: 1px solid #e2e7ed;
-		}
-		.main_tab {
-			COLOR: #000000;
-			BACKGROUND-COLOR: #e2e7ed;
-			border: 1px solid #e2e7ed;
-		}
-		.MM a {
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 12px;
-			line-height: 26px;
-			color: #666666;
-			background-image: url(<%=path %>/img/menu_bg.gif);
-			background-repeat: no-repeat;
-			list-style-type: none;
-			list-style-image: none;
-		}
-		a:link {
-			font-size: 12px;
-			line-height: 25px;
-			color: #333333;
-			text-decoration: none;
-		}
-		a:hover {
-			font-size: 12px;
-			line-height: 25px;
-			color: #666666;
-			text-decoration: none;
-		}
-		a:visited {
-			font-size: 12px;
-			line-height: 25px;
-			color: #333333;
-			text-decoration: none;
-		}
-	
-	
-		.MM a:link {
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 12px;
-			line-height: 26px;
-			color: #666666;
-			background-image: url(<%=path %>/img/menu_bg.gif);
-			background-repeat: no-repeat;
-			list-style-type: none;
-			list-style-image: none;
-		}
-		</style>
-		<script type='text/javascript' src='<%=path %>/dwr/interface/loginService.js'></script>
-        <script type='text/javascript' src='<%=path %>/dwr/engine.js'></script>
-        <script type='text/javascript' src='<%=path %>/dwr/util.js'></script>
-        
-		<script language="javascript">
-		function check1()
-		{                                                                                         
-		     if(document.ThisForm.userName.value=="")
-			 {
-			 	alert("请输入用户名");
-				document.ThisForm.userName.focus();
-				return false;
-			 }
-			 if(document.ThisForm.userPw.value=="")
-			 {
-			 	alert("请输入密码");
-				document.ThisForm.userPw.focus();
-				return false;
-			 }
-			 if(document.ThisForm.userType.value=="-1")
-			 {
-			 	alert("请选择登陆身份");
-				document.ThisForm.userType.focus();
-				return false;
-			 }
-			 document.getElementById("indicator").style.display="block";
-			 loginService.login(document.ThisForm.userName.value,document.ThisForm.userPw.value,document.ThisForm.userType.value,callback);
-		}
-		
-		function callback(data)
-		{
-		    document.getElementById("indicator").style.display="none";
-		    if(data=="no")
-		    {
-		        alert("用户名或密码错误");
-		    }
-		    if(data=="yes")
-		    {
-		        alert("通过验证,系统登录成功");
-		        window.location.href="<%=path %>/loginSuccess.jsp";
-		    }
-		    
-		}
-	    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <title>企业员工信息管理系统 - 登录</title>
+    <style type="text/css">
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { height: 100%; }
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #1e4fd6 0%, #2563eb 48%, #4f8ef7 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+        /* 背景装饰圆 */
+        .deco { position: absolute; border-radius: 50%; background: rgba(255,255,255,.08); }
+        .deco1 { width: 420px; height: 420px; top: -160px; right: -120px; }
+        .deco2 { width: 300px; height: 300px; bottom: -120px; left: -80px; }
+        .deco3 { width: 120px; height: 120px; top: 18%; left: 12%; background: rgba(255,255,255,.06); }
+
+        .login-card {
+            position: relative;
+            z-index: 2;
+            width: 400px;
+            max-width: calc(100vw - 40px);
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 18px 50px rgba(9, 30, 88, .35);
+            padding: 42px 38px 34px;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+        }
+        .brand-badge {
+            width: 52px; height: 52px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #2563eb, #4f8ef7);
+            color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 14px rgba(37, 99, 235, .35);
+        }
+        h1 {
+            text-align: center;
+            font-size: 21px;
+            color: #1e293b;
+            letter-spacing: 2px;
+            margin-top: 16px;
+        }
+        .sub {
+            text-align: center;
+            font-size: 12px;
+            color: #94a3b8;
+            letter-spacing: 1px;
+            margin: 6px 0 26px;
+        }
+        .field { margin-bottom: 18px; }
+        .field label {
+            display: block;
+            font-size: 13px;
+            color: #475569;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+        .field input[type="text"],
+        .field input[type="password"],
+        .field select {
+            width: 100%;
+            height: 42px;
+            padding: 0 14px;
+            border: 1px solid #d8dfeb;
+            border-radius: 8px;
+            background: #f8fafd;
+            font-size: 14px;
+            color: #1e293b;
+            outline: none;
+            transition: all .2s ease;
+        }
+        .field input:focus, .field select:focus {
+            border-color: #2563eb;
+            background: #fff;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, .14);
+        }
+        .btn-row { margin-top: 26px; display: flex; gap: 12px; }
+        .btn-login {
+            flex: 1;
+            height: 44px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #2563eb, #3b82f6);
+            color: #fff;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 6px;
+            cursor: pointer;
+            transition: all .2s ease;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, .35);
+        }
+        .btn-login:hover { background: linear-gradient(135deg, #1d4ed8, #2563eb); box-shadow: 0 6px 16px rgba(37, 99, 235, .45); }
+        .btn-login:active { transform: translateY(1px); }
+        .btn-reset {
+            width: 88px;
+            height: 44px;
+            border: 1px solid #d8dfeb;
+            border-radius: 8px;
+            background: #fff;
+            color: #64748b;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all .2s ease;
+        }
+        .btn-reset:hover { color: #2563eb; border-color: #2563eb; background: #eaf1ff; }
+        #indicator { vertical-align: middle; margin-left: 8px; }
+        .login-footer {
+            position: relative;
+            z-index: 2;
+            margin-top: 26px;
+            color: rgba(255,255,255,.75);
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+    </style>
+    <script type='text/javascript' src='<%=path %>/dwr/interface/loginService.js'></script>
+    <script type='text/javascript' src='<%=path %>/dwr/engine.js'></script>
+    <script type='text/javascript' src='<%=path %>/dwr/util.js'></script>
+
+    <script language="javascript">
+        function check1()
+        {
+             if(document.ThisForm.userName.value=="")
+             {
+                alert("请输入用户名");
+                document.ThisForm.userName.focus();
+                return false;
+             }
+             if(document.ThisForm.userPw.value=="")
+             {
+                alert("请输入密码");
+                document.ThisForm.userPw.focus();
+                return false;
+             }
+             if(document.ThisForm.userType.value=="-1")
+             {
+                alert("请选择登陆身份");
+                document.ThisForm.userType.focus();
+                return false;
+             }
+             document.getElementById("indicator").style.display="inline-block";
+             loginService.login(document.ThisForm.userName.value,document.ThisForm.userPw.value,document.ThisForm.userType.value,callback);
+        }
+
+        function callback(data)
+        {
+            document.getElementById("indicator").style.display="none";
+            if(data=="no")
+            {
+                alert("用户名或密码错误");
+            }
+            if(data=="yes")
+            {
+                alert("通过验证,系统登录成功");
+                window.location.href="<%=path %>/loginSuccess.jsp";
+            }
+        }
+    </script>
 </head>
 <body>
-<table width="100%" height="166" border="0" cellpadding="0" cellspacing="0">
-  <tr>
-    <td height="42" valign="top">
-       <table width="100%" height="42" border="0" cellpadding="0" cellspacing="0" class="login_top_bg">
-	      <tr>
-	        <td width="1%" height="21">&nbsp;</td>
-	        <td height="42">&nbsp;</td>
-	        <td width="17%">&nbsp;</td>
-	      </tr>
-       </table>
-    </td>
-  </tr>
-  <tr>
-    <td valign="top">
-     <table width="100%" height="532" border="0" cellpadding="0" cellspacing="0" class="login_bg">
-      <tr>
-        <td width="49%" align="right"><table width="91%" height="532" border="0" cellpadding="0" cellspacing="0" class="login_bg2">
-            <tr>
-              <td height="138" valign="top"><table width="89%" height="427" border="0" cellpadding="0" cellspacing="0">
-                <tr>
-                  <td height="149">&nbsp;</td>
-                </tr>
-                <tr>
-                  <td height="80" align="right" valign="top"></td>
-                </tr>
-                <tr>
-                  <td height="198" align="right" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
-                    <tr>
-                      <td width="35%">&nbsp;</td>
-                      <td height="25" colspan="2" class="left_txt"></td>
-                    </tr>
-                    <tr>
-                      <td>&nbsp;</td>
-                      <td height="25" colspan="2" class="left_txt"></td>
-                    </tr>
-                    <tr>
-                      <td>&nbsp;</td>
-                      <td height="25" colspan="2" class="left_txt"></td>
-                    </tr>
-                    <tr>
-                      <td>&nbsp;</td>
-                      <td width="30%" height="40"></td>
-                      <td width="35%"></td>
-                    </tr>
-                  </table></td>
-                </tr>
-              </table></td>
-            </tr>
-            
-        </table></td>
-        <td width="1%" >&nbsp;</td>
-        <td width="50%" valign="bottom"><table width="100%" height="59" border="0" align="center" cellpadding="0" cellspacing="0">
-            <tr>
-              <td width="4%">&nbsp;</td>
-              <td width="96%" height="38"><span class="login_txt_bt">企业员工信息管理系统</span></td>
-            </tr>
-            <tr>
-              <td>&nbsp;</td>
-              <td height="21"><table cellSpacing="0" cellPadding="0" width="100%" border="0" id="table211" height="328">
-                  <tr>
-                    <td height="164" colspan="2" align="middle">
-                        <FORM name="ThisForm" action="<%=path %>/adminLogin.action" method=post>
-                        <table cellSpacing="0" cellPadding="0" width="100%" border="0" height="143" id="table212">
-                          <tr>
-                            <td width="13%" height="38" class="top_hui_text"><span class="login_txt">用户名：&nbsp;&nbsp; </span></td>
-                            <td height="38" colspan="2" class="top_hui_text"><input name="userName" class="editbox4" value="" size="20">                            </td>
-                          </tr>
-                          <tr>
-                            <td width="13%" height="35" class="top_hui_text"><span class="login_txt"> 密 码： &nbsp;&nbsp; </span></td>
-                            <td height="35" colspan="2" class="top_hui_text"><input class="editbox4" type="password" size="20" name="userPw">
-                              <img src="<%=path %>/img/luck.gif" width="19" height="18"> </td>
-                          </tr>
-                          <tr>
-                            <td width="13%" height="35" ><span class="login_txt">登录身份：</span></td>
-                            <td height="35" colspan="2" class="top_hui_text">
-                                 <select class="INPUT_text" name="userType">
-                                     <option value="-1">请选择</option>
-	                                 <option value="0">管理员</option>
-	                                 <option value="1">员&nbsp;&nbsp;&nbsp;工</option>
-								 </select>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td height="35" >&nbsp;</td>
-                            <td width="80%" height="35" >
-                                <input name="button" type="button" id="Submit" value="登 陆" onClick="check1()"> 
-                                <input name="cs" type="reset" class="button" id="cs" value="重 置">
-                                <img id="indicator" src="<%=path %>/img/loading.gif" style="display:none"/>
-                            </td>
-                            <td width="20%"></td>
-                          </tr>
-                        </table>
-                        <br>
-                    </form></td>
-                  </tr>
-                  <tr>
-                    <td width="433" height="164" align="right" valign="bottom"></td>
-                    <td width="57" align="right" valign="bottom">&nbsp;</td>
-                  </tr>
-              </table></td>
-            </tr>
-          </table>
-          </td>
-      </tr>
-    </table></td>
-  </tr>
-</table>
+    <div class="deco deco1"></div>
+    <div class="deco deco2"></div>
+    <div class="deco deco3"></div>
+
+    <div class="login-card">
+        <div class="brand"><div class="brand-badge">HR</div></div>
+        <h1>企业员工信息管理系统</h1>
+        <div class="sub">Human Resource Management System</div>
+
+        <form name="ThisForm" action="<%=path %>/adminLogin.action" method="post">
+            <div class="field">
+                <label>用户名</label>
+                <input type="text" name="userName" value="" placeholder="请输入用户名" autocomplete="off">
+            </div>
+            <div class="field">
+                <label>密码</label>
+                <input type="password" name="userPw" placeholder="请输入密码">
+            </div>
+            <div class="field">
+                <label>登录身份</label>
+                <select name="userType">
+                    <option value="-1">请选择登录身份</option>
+                    <option value="0">管理员</option>
+                    <option value="1">员工</option>
+                </select>
+            </div>
+            <div class="btn-row">
+                <button type="button" class="btn-login" onclick="check1()">登录</button>
+                <button type="reset" class="btn-reset">重 置</button>
+            </div>
+            <img id="indicator" src="<%=path %>/img/loading.gif" style="display:none" alt="loading">
+        </form>
+    </div>
+
+    <div class="login-footer">企业员工信息管理系统 &copy; 人力资源部</div>
 </body>
 </html>

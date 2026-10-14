@@ -41,20 +41,20 @@ function dTree(objName) {
 		inOrder					: false
 	}
 	this.icon = {
-		root				: '/rlzy/img/base.gif',
-		folder			: '/rlzy/img/folder.gif',
-		folderOpen	: '/rlzy/img/folderopen.gif',
-		node				: '/rlzy/img/page.gif',
-		empty				: '/rlzy/img/empty.gif',
-		line				: '/rlzy/img/line.gif',
-		join				: '/rlzy/img/join.gif',
-		joinBottom	: '/rlzy/img/joinbottom.gif',
-		plus				: '/rlzy/img/plus.gif',
-		plusBottom	: '/rlzy/img/plusbottom.gif',
-		minus				: '/rlzy/img/minus.gif',
-		minusBottom	: '/rlzy/img/minusbottom.gif',
-		nlPlus			: '/rlzy/img/nolines_plus.gif',
-		nlMinus			: '/rlzy/img/nolines_minus.gif'
+		root				: '/rlzy/img/tree2/base.svg',
+		folder			: '/rlzy/img/tree2/folder.svg',
+		folderOpen	: '/rlzy/img/tree2/folder_open.svg',
+		node				: '/rlzy/img/tree2/page.svg',
+		empty				: '/rlzy/img/tree2/spacer.svg',
+		line				: '/rlzy/img/tree2/spacer.svg',
+		join				: '/rlzy/img/tree2/spacer.svg',
+		joinBottom	: '/rlzy/img/tree2/spacer.svg',
+		plus				: '/rlzy/img/tree2/chevron_right.svg',
+		plusBottom	: '/rlzy/img/tree2/chevron_right.svg',
+		minus				: '/rlzy/img/tree2/chevron_down.svg',
+		minusBottom	: '/rlzy/img/tree2/chevron_down.svg',
+		nlPlus			: '/rlzy/img/tree2/chevron_right.svg',
+		nlMinus			: '/rlzy/img/tree2/chevron_down.svg'
 	};
 	this.obj = objName;
 	this.aNodes = [];

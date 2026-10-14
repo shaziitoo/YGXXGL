@@ -1,0 +1,194 @@
+@charset "UTF-8";
+/* ============================================================
+   企业员工信息管理系统 - 现代简约蓝白主题 (theme.css)
+   在 base.css 之后引入，覆盖旧版表格/按钮/配色样式
+   ============================================================ */
+
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --primary-light: #eaf1ff;
+  --bg: #eef2f7;
+  --card: #ffffff;
+  --text: #303133;
+  --text-secondary: #64748b;
+  --border: #e8ecf3;
+  --danger: #ef4444;
+}
+
+/* ---------- 全局 ---------- */
+* {
+  font-size: 14px;
+  font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 18px 22px;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* ---------- 链接 ---------- */
+a:link, a:visited { color: var(--primary); text-decoration: none; }
+a:hover { color: var(--primary-dark); text-decoration: underline; }
+a:active { color: var(--primary-dark); }
+.pn-loperator { font-weight: 500; }
+
+b, strong { color: inherit; font-weight: 600; }
+
+/* ---------- 表格卡片（覆盖旧 bgcolor 表格） ---------- */
+table[bgcolor] {
+  background: var(--card);
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(29, 78, 216, 0.08);
+}
+
+/* 去掉旧版 td 的 gif 背景图 */
+td[background] { background-image: none; }
+
+/* 圆角补角：让首末行单元格跟随表格圆角 */
+table[bgcolor] tr:first-child td:first-child { border-top-left-radius: 10px; }
+table[bgcolor] tr:first-child td:last-child  { border-top-right-radius: 10px; }
+table[bgcolor] tr:last-child td:first-child  { border-bottom-left-radius: 10px; }
+table[bgcolor] tr:last-child td:last-child   { border-bottom-right-radius: 10px; }
+
+/* 标题栏（列表页/表单页第一行） */
+table[bgcolor] tr[bgcolor="#E7E7E7"] > td,
+table[bgcolor] tr[bgcolor="#EEF4EA"] > td {
+  background: linear-gradient(90deg, #f4f8ff 0%, #ffffff 100%);
+  color: #1e293b;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 13px 18px;
+  border-bottom: 1px solid var(--border);
+  letter-spacing: 1px;
+}
+
+/* 列表表头行 */
+table[bgcolor] tr[bgcolor="#FAFAF1"] > td {
+  background: #f7f9fd;
+  color: #475569;
+  font-weight: 600;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* 数据单元格 */
+table[bgcolor] td[bgcolor="#FFFFFF"] {
+  background: #ffffff;
+  padding: 10px 14px;
+  border-bottom: 1px solid #f1f4f9;
+  color: var(--text);
+}
+table[bgcolor] tr:last-child td[bgcolor="#FFFFFF"] { border-bottom: none; }
+
+/* 表单页左侧标签列 */
+td[bgcolor="#FFFFFF"][align="right"] {
+  color: #5b6b84;
+  font-weight: 500;
+}
+
+/* ---------- 按钮 ---------- */
+input[type="button"],
+input[type="submit"] {
+  display: inline-block;
+  padding: 7px 18px;
+  margin: 2px 4px 2px 0;
+  background: var(--primary);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: background .2s ease, box-shadow .2s ease, transform .1s ease;
+  box-shadow: 0 2px 5px rgba(37, 99, 235, .25);
+}
+input[type="button"]:hover,
+input[type="submit"]:hover {
+  background: var(--primary-dark);
+  box-shadow: 0 3px 8px rgba(37, 99, 235, .35);
+}
+input[type="button"]:active,
+input[type="submit"]:active { transform: translateY(1px); }
+
+input[type="reset"] {
+  display: inline-block;
+  padding: 6px 18px;
+  margin: 2px 4px 2px 0;
+  background: #ffffff;
+  color: #64748b;
+  border: 1px solid #d6dce5;
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+input[type="reset"]:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+
+.ButtonCss { cursor: pointer; }
+
+/* ---------- 输入框 ---------- */
+input[type="text"],
+input[type="password"],
+input[type="file"],
+select,
+textarea {
+  padding: 6px 10px;
+  border: 1px solid #d6dce5;
+  border-radius: 6px;
+  background: #ffffff;
+  color: var(--text);
+  outline: none;
+  font-size: 14px;
+  line-height: 1.6;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, .12);
+}
+input[readonly] { background: #f6f8fb; color: #64748b; }
+
+input[type="radio"],
+input[type="checkbox"] {
+  border: none;
+  accent-color: var(--primary);
+  vertical-align: -2px;
+  margin: 0 3px 0 1px;
+}
+
+/* ---------- 树形菜单（dtree） ---------- */
+.dtree a { border-radius: 5px; padding: 2px 6px; }
+.dtree a.node:hover, .dtree a.nodeSel:hover {
+  color: var(--primary);
+  background: var(--primary-light);
+  text-decoration: none;
+}
+
+/* ---------- 滚动条 ---------- */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: #c4cddd; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #a8b6cc; }
+::-webkit-scrollbar-track { background: transparent; }
+/* ---------- 部门组织树卡片 ---------- */
+.dtree {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(29, 78, 216, 0.08);
+    padding: 18px 20px;
+    margin-bottom: 16px;
+}

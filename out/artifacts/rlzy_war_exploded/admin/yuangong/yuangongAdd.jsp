@@ -15,27 +15,20 @@ String path = request.getContextPath();
 		<meta http-equiv="description" content="This is my page" />
         
         <link rel="stylesheet" type="text/css" href="<%=path %>/css/base.css" />
+		<link rel="stylesheet" type="text/css" href="<%=path %>/css/theme.css" />
         
         <script type="text/javascript">
 		    function orgAll()
 		    {
 		       	var strUrl = "<%=path %>/org?type=orgAll";
-				var ret = window.open(strUrl,"","dialogWidth:350px; dialogHeight:400px; dialogLeft: status:no; directories:yes;scrollbars:yes;Resizable=no;");
-				var ret = window.returnVaule;
-				if(ret==undefined)
-			    {
-			        ret="";
-			    }
-			    document.getElementById("org_id").value=ret;
-			    
+				window.open(strUrl,"","dialogWidth:380px; dialogHeight:440px; status:no; directories:yes; scrollbars:yes; Resizable=no;");
 		    }
-		    
-		    function orgAllFresh(){
-		    	if( window.returnVaule==undefined)
-			    {
-		    		 window.returnVaule="";
-			    }
-		    	document.getElementById("org_id").value = window.returnVaule;
+
+		    // 弹窗选择部门后回调：直接显示部门名称（隐藏域保存部门ID）
+		    function onOrgSelected(id, name)
+		    {
+		        document.getElementById("org_id").value = id;
+		        document.getElementById("org_name").value = name;
 		    }
 		    
 		    function check()
@@ -71,19 +64,18 @@ String path = request.getContextPath();
 						<tr bgcolor="#EEF4EA">
 					        <td colspan="3" background="<%=path %>/images/wbg.gif" class='title'><span>员工管理</span></td>
 					    </tr>
-					    <tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='red';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
+					    <tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='#eef4ff';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
 						    <td width="25%" bgcolor="#FFFFFF" align="right">
 						         部门：
 						    </td>
 						    <td width="75%" bgcolor="#FFFFFF" align="left">
-						        <input type="text" name="org_id" id="org_id" readonly="readonly"/>
+						        <input type="hidden" name="org_id" id="org_id"/>
+						        <input type="text" id="org_name" readonly="readonly" placeholder="尚未选择部门" style="width: 160px; background: #f6f8fb;"/>
 						        <input type="button" value="选择部门" onclick="orgAll()"/>
-						         <input type="button" value="刷新" onclick="orgAllFresh()"/>
-						          选择完部门后请点刷新按钮
 						    </td>
 						 
 						</tr>
-					    <tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='red';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
+					    <tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='#eef4ff';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
 						    <td width="25%" bgcolor="#FFFFFF" align="right">
 						               工号：
 						    </td>
@@ -91,7 +83,7 @@ String path = request.getContextPath();
 						        <input type="text" name="bianhao" id="bianhao" size="22"/>
 						    </td>
 						</tr>
-						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='red';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
+						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='#eef4ff';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
 						    <td width="25%" bgcolor="#FFFFFF" align="right">
 						               姓名：
 						    </td>
@@ -99,7 +91,7 @@ String path = request.getContextPath();
 						        <input type="text" name="name" id="name" size="22"/>
 						    </td>
 						</tr>
-						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='red';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
+						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='#eef4ff';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
 						    <td width="25%" bgcolor="#FFFFFF" align="right">
 						        性别：
 						    </td>
@@ -109,7 +101,7 @@ String path = request.getContextPath();
 						        <input type="radio" name="sex" value="女"/>女
 						    </td>
 						</tr>
-						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='red';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
+						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='#eef4ff';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
 						    <td width="25%" bgcolor="#FFFFFF" align="right">
 						         年龄：
 						    </td>
@@ -117,7 +109,7 @@ String path = request.getContextPath();
 						        <input type="text" name="age" size="22"/>
 						    </td>
 						</tr>
-						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='red';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
+						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='#eef4ff';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
 						    <td width="25%" bgcolor="#FFFFFF" align="right">
 						         职位：
 						    </td>
@@ -125,7 +117,7 @@ String path = request.getContextPath();
 						        <input type="text" name="zhiwei" size="22"/>
 						    </td>
 						</tr>
-						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='red';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
+						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='#eef4ff';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
 						    <td width="25%" bgcolor="#FFFFFF" align="right">
 						         是否部门领导：
 						    </td>
@@ -136,7 +128,7 @@ String path = request.getContextPath();
 						       
 						    </td>
 						</tr>
-						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='red';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
+						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='#eef4ff';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
 						    <td width="25%" bgcolor="#FFFFFF" align="right">
 						         账号：
 						    </td>
@@ -144,15 +136,7 @@ String path = request.getContextPath();
 						        <input type="text" name="loginname" size="22" />
 						    </td>
 						</tr>
-						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='red';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
-						    <td width="25%" bgcolor="#FFFFFF" align="right">
-						        密码：
-						    </td>
-						    <td width="75%" bgcolor="#FFFFFF" align="left">
-						        <input type="text" name="loginpw" size="22" value="000000"/>
-						    </td>
-						</tr>
-						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='red';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
+												<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='#eef4ff';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
 						    <td width="25%" bgcolor="#FFFFFF" align="right">
 						        &nbsp;
 						    </td>

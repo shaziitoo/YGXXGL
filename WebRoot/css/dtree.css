@@ -1,34 +1,64 @@
-/*--------------------------------------------------|
-| dTree 2.05 | www.destroydrop.com/javascript/tree/ |
-|---------------------------------------------------|
-| Copyright (c) 2002-2003 Geir Landr�               |
-|--------------------------------------------------*/
+@charset "UTF-8";
+/* ============================================================
+   dTree 现代化样式（配合 img/tree2/ 的 SVG 图标）
+   ============================================================ */
 
 .dtree {
-	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
-	font-size: 11px;
-	color: #666;
-	white-space: nowrap;
+    font-family: "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+    font-size: 14px;
+    color: #303133;
+    white-space: nowrap;
+    line-height: 24px;
 }
+
 .dtree img {
-	border: 0px;
-	vertical-align: middle;
+    border: 0;
+    vertical-align: middle;
 }
+
+/* 每一行节点 */
+.dtree div.dTreeNode {
+    padding: 1px 0;
+}
+
+/* 根节点行（如"部门组织结构图"） */
+.dtree > div:first-child {
+    font-weight: 600;
+    color: #1e293b;
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+/* 节点链接 */
 .dtree a {
-	color: #333;
-	text-decoration: none;
+    color: #303133;
+    text-decoration: none;
 }
-.dtree a.node, .dtree a.nodeSel {
-	white-space: nowrap;
-	padding: 1px 2px 1px 2px;
-}
-.dtree a.node:hover, .dtree a.nodeSel:hover {
-	color: #333;
-	text-decoration: underline;
-}
+
+.dtree a.node,
 .dtree a.nodeSel {
-	background-color: #c0d2ec;
+    display: inline-block;
+    padding: 4px 10px;
+    margin-left: 2px;
+    border-radius: 7px;
+    line-height: 22px;
+    white-space: nowrap;
+    transition: background .15s ease, color .15s ease;
 }
+
+.dtree a.node:hover,
+.dtree a.nodeSel:hover {
+    color: #2563eb;
+    background: #eaf1ff;
+    text-decoration: none;
+}
+
+/* 当前选中节点：蓝色胶囊 */
+.dtree a.nodeSel {
+    background: #2563eb;
+    color: #ffffff;
+}
+
 .dtree .clip {
-	overflow: hidden;
+    overflow: hidden;
 }

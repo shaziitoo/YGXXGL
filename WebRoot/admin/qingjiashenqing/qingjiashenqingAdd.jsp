@@ -17,6 +17,7 @@ String path = request.getContextPath();
 		<meta http-equiv="description" content="This is my page" />
         
         <link rel="stylesheet" type="text/css" href="<%=path %>/css/base.css" />
+		<link rel="stylesheet" type="text/css" href="<%=path %>/css/theme.css" />
         <script type="text/javascript" src="<%=path %>/My97DatePicker/WdatePicker.js"></script>
         <script language="javascript">
         </script>
@@ -28,7 +29,7 @@ String path = request.getContextPath();
 						<tr bgcolor="#EEF4EA">
 					        <td colspan="3" background="<%=path %>/img/wbg.gif" class='title'><span>请假申请</span></td>
 					    </tr>
-						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='red';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
+						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='#eef4ff';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
 						    <td width="25%" bgcolor="#FFFFFF" align="right">
 						          开始时间：
 						    </td>
@@ -36,7 +37,7 @@ String path = request.getContextPath();
 						        <input name="kaishishijian" class="Wdate" readonly="readonly" type="text" onfocus="WdatePicker({skin:'whyGreen',dateFmt:'yyyy-MM-dd'})"/>
 						    </td>
 						</tr>
-						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='red';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
+						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='#eef4ff';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
 						    <td width="25%" bgcolor="#FFFFFF" align="right">
 						          结束时间：
 						    </td>
@@ -44,7 +45,7 @@ String path = request.getContextPath();
 						        <input name="jieshushijian" class="Wdate" readonly="readonly" type="text" onfocus="WdatePicker({skin:'whyGreen',dateFmt:'yyyy-MM-dd'})"/>
 						    </td>
 						</tr>
-						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='red';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
+						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='#eef4ff';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
 						    <td width="25%" bgcolor="#FFFFFF" align="right">
 						        事由：
 						    </td>
@@ -53,7 +54,7 @@ String path = request.getContextPath();
 	                            </FCK:editor>
 						    </td>
 						</tr>
-						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='red';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
+						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='#eef4ff';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
 						    <td width="25%" bgcolor="#FFFFFF" align="right">
 						        &nbsp;
 						    </td>

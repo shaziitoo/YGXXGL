@@ -17,6 +17,7 @@ String path = request.getContextPath();
 		<meta http-equiv="description" content="This is my page" />
         
         <link rel="stylesheet" type="text/css" href="<%=path %>/css/base.css" />
+		<link rel="stylesheet" type="text/css" href="<%=path %>/css/theme.css" />
         
         <script language="javascript">
         </script>
@@ -25,7 +26,7 @@ String path = request.getContextPath();
 	<body leftmargin="2" topmargin="9" background='<%=path %>/img/allbg.gif'>
 			<form action="<%=path %>/qingjiashenqing?type=qingjiashenqing_shenhe" name="formAdd" method="post">
 				     <table width="98%" align="center" border="0" cellpadding="4" cellspacing="1" bgcolor="#CBD8AC" style="margin-bottom:8px">
-						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='red';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
+						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='#eef4ff';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
 						    <td width="25%" bgcolor="#FFFFFF" align="right">
 						          审核结果：
 						    </td>
@@ -35,7 +36,7 @@ String path = request.getContextPath();
 						        <input type="radio" name="shenhezhuangtai" value="c" style="border: 0"/>审核未通过
 						    </td>
 						</tr>
-						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='red';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
+						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='#eef4ff';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
 						    <td width="25%" bgcolor="#FFFFFF" align="right">
 						        回复信息：
 						    </td>
@@ -44,7 +45,7 @@ String path = request.getContextPath();
 	                            </FCK:editor>
 						    </td>
 						</tr>
-						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='red';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
+						<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='#eef4ff';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
 						    <td width="25%" bgcolor="#FFFFFF" align="right">
 						        &nbsp;
 						    </td>

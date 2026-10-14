@@ -16,6 +16,7 @@ String path = request.getContextPath();
 		<meta http-equiv="description" content="This is my page" />
 
 		<link rel="stylesheet" type="text/css" href="<%=path %>/css/base.css" />
+		<link rel="stylesheet" type="text/css" href="<%=path %>/css/theme.css" />
 		
         <script language="javascript">
            function yuangongDel(id)
@@ -48,11 +49,10 @@ String path = request.getContextPath();
 					<td width="7%">部门</td>
 					<td width="7%">是否部门领导</td>
 					<td width="7%">账号</td>
-					<td width="7%">密码</td>
 					<td width="7%">操作</td>
 		        </tr>	
 				<c:forEach items="${requestScope.yuangongList}" var="yuangong">
-				<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='red';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
+				<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='#eef4ff';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
 					<td bgcolor="#FFFFFF" align="center">
 						${yuangong.bianhao}
 					</td>
@@ -77,9 +77,6 @@ String path = request.getContextPath();
 					</td>
 					<td bgcolor="#FFFFFF" align="center">
 						${yuangong.loginname}
-					</td>
-					<td bgcolor="#FFFFFF" align="center">
-						${yuangong.loginpw}
 					</td>
 					<td bgcolor="#FFFFFF" align="center">
 						<a href="#" onclick="yuangongDel(${yuangong.id})" class="pn-loperator">删除</a>

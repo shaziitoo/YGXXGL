@@ -1,7 +1,7 @@
 var tcolor={
-    cColor:"#EEEEEE", //蒙皮颜色
+    cColor:"#33415566", //蒙皮颜色
     bColor:"#FFFFFF", //背景颜色
-    tColor:"#9C9E9C", //标题背景颜色，边框颜色
+    tColor:"#2563eb", //标题背景颜色，边框颜色
     wColor:"#FFFFFF" //标题文字颜色
    };
 

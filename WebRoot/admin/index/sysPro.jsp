@@ -15,6 +15,7 @@ String path = request.getContextPath();
 		<meta http-equiv="description" content="This is my page" />
 
 		<link rel="stylesheet" type="text/css" href="<%=path %>/css/base.css" />
+		<link rel="stylesheet" type="text/css" href="<%=path %>/css/theme.css" />
 	</head>
 
 	<body leftmargin="2" topmargin="9" background='<%=path %>/img/allbg.gif'>

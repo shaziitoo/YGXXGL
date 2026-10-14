@@ -9,16 +9,16 @@ function TreeNode(text, url, iconOpen, iconOpenHover, iconClosed, iconClosedHove
 	this.ancestor = [];	
 	this.isHover = false;
 	
-	this.PATH = "/rlzy/img/tree/";
-	this.COLLAPSED = this.PATH + "arrow_collapsed.gif";
-	this.EXPANDED = this.PATH + "arrow_expanded.gif";
-	this.COLLAPSED_HOVER = this.PATH + "arrow_collapsed_hover.gif";
-	this.EXPANDED_HOVER = this.PATH + "arrow_expanded_hover.gif";
-	this.CATEGORYOPEN = this.PATH + (iconOpen ? iconOpen : "folder_open.gif");
+	this.PATH = "/rlzy/img/tree2/";
+	this.COLLAPSED = this.PATH + "chevron_right.svg";
+	this.EXPANDED = this.PATH + "chevron_down.svg";
+	this.COLLAPSED_HOVER = this.PATH + "chevron_right.svg";
+	this.EXPANDED_HOVER = this.PATH + "chevron_down.svg";
+	this.CATEGORYOPEN = this.PATH + (iconOpen ? iconOpen : "folder_open.svg");
 	this.CATEGORYOPEN_HOVER = this.CATEGORYOPEN;
-	this.CATEGORYCLOSED = this.PATH + (iconClosed ? iconClosed : "folder_closed.gif");
+	this.CATEGORYCLOSED = this.PATH + (iconClosed ? iconClosed : "folder.svg");
 	this.CATEGORYCLOSED_HOVER = this.CATEGORYCLOSED;
-	this.EMPTY = this.PATH + "empty.gif";
+	this.EMPTY = this.PATH + "spacer.svg";
 
 	this.container = document.createElement("DIV");
 	this.content = document.createElement("DIV");
